@@ -1,0 +1,26 @@
+package com.wiley.utils.db;
+
+public class DBConnections {
+    public static final String POSTGRES_HOST = "jdbc:postgresql://ev-pg.crkqmj3qk07x.us-east-1.rds.amazonaws.com:5432/";
+    public static final String POSTGRES_DB_NAME = "postgres";
+    public static final String POSTGRES_USERNAME = "root";
+    public static final String POSTGRES_PD = "1BnkvOl6rwlQ6Q";
+
+
+    public static final String POSTGRES_HOST_SO = "jdbc:postgresql://dev-pg.crkqmj3qk07x.us-east-1.rds.amazonaws.com:5432/";
+    public static final String POSTGRES_DB_NAME_SO = "postgres";
+    public static final String POSTGRES_USERNAME_SO = "root";
+    public static final String POSTGRES_PD_SO = "1BnkvOl6rwlQ6Q";
+
+
+    public static final String DB2HOST = "jdbc:as400://AS142T.abc.com";
+    public static final String DB2USERNAME = "asd";
+    public static final String DB2PD = "bcd";
+
+    public static final String POSTGRES_ITEM_MASTER_UPDATE_HOST = "jdbc:postgresql://pdev-pg.crkqmj3qk07x.us-east-1.rds.amazonaws.com:5432/";
+    public static final String POSTGRES_ITEM_COST_HOST = "jdbc:postgresql://dev-pg.crkqmj3qk07x.us-east-1.rds.amazonaws.com:5432/";
+
+    public static String getPD(){
+        return POSTGRES_PD;
+    }
+}
