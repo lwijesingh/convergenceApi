@@ -29,6 +29,10 @@ public class RequestUtil {
         return RestUtil.send(RequestHeader.getBearerHeaders(getToken(clientType)), JsonUtil.objectToJson(object), uri, "POST");
     }
 
+    public static <T> Response sendRequestAsString(String uri, String clientType,String json) {
+        return RestUtil.send(RequestHeader.getBearerHeaders(getToken(clientType)), json, uri, "POST");
+    }
+
     private static String getToken(String clientType) {
         String token = "";
         switch (clientType) {

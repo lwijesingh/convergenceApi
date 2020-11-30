@@ -1,0 +1,162 @@
+[
+  {
+    "firstName": "Selct * from gbb ",
+    "lastName": "Acy",
+    "personId": "203112",
+    "teamId": "1610612751",
+    "jersey": "13",
+    "isActive": true,
+    "pos": "F",
+    "heightFeet": "6",
+    "heightInches": "7",
+    "heightMeters": "2.01",
+    "weightPounds": "240",
+    "weightKilograms": "108.9",
+    "dateOfBirthUTC": "1990-10-06",
+    "teams": [
+      {
+        "teamId": "1610612761",
+        "seasonStart": "2012",
+        "teams": [
+          {
+            "teamId2": "1610612761",
+            "seasonStart": "2012",
+            "seasonEnd": "2013"
+          },
+          {
+            "teamId": "1610612761",
+            "seasonStart": "2012",
+            "seasonEnd": "2013"
+          }
+        ],
+        "teamId": "1610612758",
+        "seasonStart": "2013",
+        "seasonEnd": "2013"
+      },
+      {
+        "teamId": "1610612758",
+        "seasonStart": "2013",
+        "seasonEnd": "2013"
+      },
+      {
+        "teamId": "1610612752",
+        "seasonStart": "2014",
+        "seasonEnd": "2014"
+      },
+      {
+        "teamId": "1610612758",
+        "seasonStart": "2015",
+        "seasonEnd": "2015"
+      },
+      {
+        "teamId": "1610612742",
+        "seasonStart": "2016",
+        "seasonEnd": "2016"
+      },
+      {
+        "teamId": "1610612751",
+        "seasonStart": "2016",
+        "seasonEnd": "2017"
+      }
+    ],
+    "draft": {
+      "teamId": "1610612760",
+      "pickNum": "32",
+      "roundNum": "2",
+      "seasonYear": "2013"
+    },
+    "nbaDebutYear": "2016",
+    "yearsPro": "1",
+    "collegeName": "",
+    "lastAffiliation": "Spain/Spain",
+    "country": "Spain"
+  },
+  {
+    "firstName": "Quincy2",
+    "lastName": "Acy",
+    "personId": "203112",
+    "teamId": "1610612751",
+    "jersey": "13",
+    "isActive": true,
+    "pos": "F",
+    "heightFeet": "6",
+    "heightInches": "7",
+    "heightMeters": "2.01",
+    "weightPounds": "240",
+    "weightKilograms": "108.9",
+    "dateOfBirthUTC": "1990-10-06",
+    "teams": [
+      {
+        "teams3": [
+          {
+            "teamId2": "1610612761",
+            "seasonStart": "2012",
+            "seasonEnd": "2013"
+          },
+          {
+            "teamId": "1610612761",
+            "seasonStart": "2013",
+            "seasonEnd": "2013"
+          }
+        ],
+        "teams4": [
+          {
+            "teamId2": "1610612761",
+            "seasonStart": "2019",
+            "seasonEnd": "2019"
+          },
+          {
+            "teamId": "1610612761",
+            "seasonStart": "2020",
+            "seasonEnd": "2020"
+          }
+        ],
+        "teamId": "1610612758",
+        "seasonStart": "2079",
+        "seasonEnd": "2013"
+      },
+      {
+        "teamId": "1610612758",
+        "seasonStart": "2013",
+        "seasonEnd": "2013"
+      },
+      {
+        "teamId": "1610612752",
+        "seasonStart": "2014",
+        "seasonEnd": "2014"
+      },
+      {
+        "teamId": "1610612758",
+        "seasonStart": "2015",
+        "seasonEnd": "2015"
+      },
+      {
+        "teamId": "1610612742",
+        "seasonStart": "2016",
+        "seasonEnd": "2016"
+      },
+      {
+        "teamId": "1610612751",
+        "seasonStart": "2016",
+        "seasonEnd": "2017",
+        "draft2": {
+          "teamId": "1610612760Test55",
+          "pickNum": "32333",
+          "roundNum": "2",
+          "seasonYear": "2013"
+        }
+      }
+    ],
+    "draft": {
+      "teamId": "1610612760Test",
+      "pickNum": "32",
+      "roundNum": "2",
+      "seasonYear": "2013"
+    },
+    "nbaDebutYear": "2016",
+    "yearsPro": "1",
+    "collegeName": "",
+    "lastAffiliation": "Spain/Spain",
+    "country": "Spain"
+  }
+]

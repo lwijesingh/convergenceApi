@@ -30,16 +30,16 @@ public class RestUtil {
             RestAssured.port = PORT;
         }
 
-        System.out.println("\n\nHEADERS\n" + headers + "\n*********\n\n");
-        System.out.println("\n\nREQUEST_URL\n" + RestAssured.baseURI + RestAssured.basePath + "/" + uri + "\n*********\n\n");
+        LoggerUtil.log("\n\nHEADERS\n" + headers + "\n*********\n\n");
+        LoggerUtil.log("\n\nREQUEST_URL\n" + RestAssured.baseURI + RestAssured.basePath + "/" + uri + "\n*********\n\n");
         RequestSpecification requestSpecification = getRequestSpec(headers, bodyString);
-        System.out.println("\n\nREQUEST_BODY\n" + bodyString + "\n*********\n\n");
+        LoggerUtil.log("\n\nREQUEST_BODY\n" + bodyString + "\n*********\n\n");
         RestAssured.useRelaxedHTTPSValidation();
         requestSpecification = RestAssured.given().spec(requestSpecification);
         String theUri = setQueryParameters(uri, queryParameters);
         Response response = execute(requestMethod, requestSpecification, theUri);
-        System.out.println("\n\nRESPONSE\n" + response.getBody().asString() + "\n*********\n\n");
-        System.out.println("\n\nRESPONSE_STATUS_CODE\n" + response.getStatusCode() + "\n*********\n\n");
+        LoggerUtil.log("\n\nRESPONSE\n" + response.getBody().asString() + "\n*********\n\n");
+        LoggerUtil.log("\n\nRESPONSE_STATUS_CODE\n" + response.getStatusCode() + "\n*********\n\n");
         return response;
     }
 
