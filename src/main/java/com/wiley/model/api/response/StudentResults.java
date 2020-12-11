@@ -1,4 +1,4 @@
 package com.wiley.model.api.response;
 
-public class Results {
+public class StudentResults {
 }

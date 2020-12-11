@@ -1,9 +1,6 @@
 package com.wiley.tests;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
 import com.wiley.common.CompareData;
@@ -11,22 +8,17 @@ import com.wiley.common.DbUnitJSONParser;
 import com.wiley.common.LoggerUtil;
 import com.wiley.model.api.request.CourseDetails;
 import com.wiley.model.api.request.StudentDetails;
-import com.wiley.model.api.response.Results;
-import com.wiley.model.db.response.StudentResults;
+import com.wiley.model.api.response.StudentResults;
+import com.wiley.model.db.response.ExamResults;
 import com.wiley.utils.TestBase;
 import com.wiley.utils.api.RequestUtil;
 import com.wiley.utils.api.ResponseUtil;
-import com.wiley.utils.db.DBConnections;
 import com.wiley.utils.db.DBUtil;
 import com.wiley.utils.json.JsonUtil;
-import org.dbunit.JdbcDatabaseTester;
-import org.dbunit.database.IDatabaseConnection;
 import org.dbunit.dataset.ITable;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
-
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
 import java.sql.ResultSet;
@@ -49,10 +41,10 @@ public class SampleTests extends TestBase {
         studentDetails[0].coursesAttended.add(courseDetails[0]);
         response001 = RequestUtil.sendRequest("", RequestUtil.CONSUMER_2, studentDetails[0]);
 
-        //Mapping Response to an Object
-        Results results = ResponseUtil.getResponseAsMapped(response001, Results.class);
+        // 1.) Mapping Response to an Object
+        StudentResults studentResults = ResponseUtil.getResponseAsMapped(response001, StudentResults.class);
 
-        //Directly getting values as xpth
+        // 2.) Directly getting values as xpth
         JsonPath jsonPathEvaluator02 = response001.jsonPath();
         int halmlessTotal = jsonPathEvaluator02.getInt("data.attributes.last_analysis_stats.harmless");
 
@@ -61,16 +53,16 @@ public class SampleTests extends TestBase {
     @Test
     public void testDBRequestAndResponse() {
         String sqlQuery = "Select * from Student";
-        StudentResults studentResults = dbUtil.getQueryData(dbUtil.DB2, sqlQuery, StudentResults.class);
+        String sqlQuery3 = "Select * from Exam";
+        ExamResults examResults = dbUtil.getQueryData(dbUtil.DB2, sqlQuery, ExamResults.class);
 
-        ResultSet resultset = dbUtil.execQuery(sqlQuery);
-        ResultSet resultSet2 = dbUtil.execQuery(sqlQuery);
-
-       LoggerUtil.log(studentResults.getQHACTI());
+       LoggerUtil.log(examResults.getQHACTI());
     }
 
     @Test
     public void testDBRequestAndResponseByXpath() {
+        //Reading a lengthy String Json response
+
         HashMap<String, Object> map[] = JsonUtil.getJSONArrayMapped("AllCourseDetails");
 
         String CouchebaseQueary = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[1]), "$..bicycle.price");

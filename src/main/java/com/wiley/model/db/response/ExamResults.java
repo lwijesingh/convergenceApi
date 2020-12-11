@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class StudentResults {
+public class ExamResults {
 
     private String QHTRNU;
     private String QHARCO;

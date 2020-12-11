@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wiley</groupId>
-    <artifactId>convergence</artifactId>
+    <artifactId>hive</artifactId>
     <version>1.0</version>
 
     <name>convergence</name>
