@@ -1,9 +1,11 @@
 package com.wiley.utils.json;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.*;
+import com.google.gson.reflect.TypeToken;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.wiley.common.LoggerUtil;
@@ -14,6 +16,7 @@ import org.json.JSONObject;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -57,7 +60,54 @@ public class JsonUtil {
         } catch (FileNotFoundException e) {
             LoggerUtil.log(e);
         }
+
         return GSON.fromJson(GSON.toJson(GSON.fromJson(element, JsonElement.class)), HashMap[].class);
+
+    }
+
+    public static List<HashMap<String, Object>> getJSONListMapped(String fileName) throws IOException {
+        JsonParser jsonParser = new JsonParser();
+        JsonElement element = null;
+        try {
+            element = jsonParser.parse(new FileReader(loadFile(fileName)));
+        } catch (FileNotFoundException e) {
+            LoggerUtil.log(e);
+        }
+        ObjectMapper objectMapper=new ObjectMapper();
+        List<HashMap<String, Object>> myObjects = objectMapper.readValue(element.toString() , new TypeReference<List<HashMap<String, Object>>>(){});
+        return myObjects;
+
+    }
+
+
+    public static HashMap<String, Object>[] getJSONArrayMapped1(String fileName) throws IOException {
+        JsonParser jsonParser = new JsonParser();
+        JsonElement element = null;
+        try {
+            element = jsonParser.parse(new FileReader(loadFile(fileName)));
+        } catch (FileNotFoundException e) {
+            LoggerUtil.log(e);
+        }
+        System.out.println("*****"+element);
+        System.out.println("*####****"+element.toString());
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        TypeReference<HashMap<String, Object>> typeRef = new TypeReference<HashMap<String, Object>>() {};
+        //TypeReference<List<Map<String, Object>>> typeReference = new TypeReference<>() {};
+        HashMap<String, Object> o[] = mapper.readValue(element.toString(), typeRef);
+        return o;
+    }
+
+
+    public static String[] getJSONArrayAsAString(String fileName) {
+        JsonParser jsonParser = new JsonParser();
+        JsonElement element = null;
+        try {
+            element = jsonParser.parse(new FileReader(loadFile(fileName)));
+        } catch (FileNotFoundException e) {
+            LoggerUtil.log(e);
+        }
+        return GSON.fromJson(GSON.toJson(GSON.fromJson(element, JsonElement.class)), String[].class );
 
     }
 
@@ -108,7 +158,7 @@ public class JsonUtil {
     }
 
     public static <T> String objectToJson(T objectToJson) {
-        return GSON.toJson(objectToJson);
+          return GSON.toJson(objectToJson);
     }
 
     public static <T> T getObjectFromJsonString(String jsonString, Class<T> classToMap) {

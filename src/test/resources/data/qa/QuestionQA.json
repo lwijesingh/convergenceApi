@@ -1,0 +1,296 @@
+[{
+  "numAttempts": 0.1,
+  "_doctype": 7,
+  "masterQuestionId": "w431d0681-bcd6-4fb2-bc52-afd767be322d",
+  "masterQuestionVersion": "0",
+  "timeSpent": 0,
+  "policies": {
+    "assistancePolicies": [
+      {
+        "assistanceType": "answer",
+        "availableSinceAttempt": -1,
+        "penalty": 0
+      }
+    ],
+    "scoreToKeep": "best2",
+    "attemptPolicy": {
+      "maxAttempts": 3,
+      "attemptPenalty": {
+        "attempt": 3,
+        "penalty": 0
+      }
+    },
+    "hideTitle": false,
+    "multiPartBehaviourPolicy": {
+      "stepped": false,
+      "submitAll": true
+    },
+    "securityPolicy": {
+      "applicable": false,
+      "password": ""
+    },
+    "dueDatePolicy": {
+      "autoSubmit": true,
+      "rules": {
+        "itemAssistance": "all",
+        "finish": "byDueDate",
+        "itemAccess": "yes",
+        "lateSubmit": "no",
+        "itemListDetails": "yes"
+      },
+      "penalties": [],
+      "afterDueDateAccess": "viewWithAssistances"
+    },
+    "feedbackPolicy": "always",
+    "timeDurationPolicy": {
+      "duration": 60,
+      "applicable": false
+    },
+    "shuffleResponseLabels": false
+  },
+  "_epoch": 1613117991480,
+  "title": "Chapter 08 Critical Thinking Exercise Question 1",
+  "algorithmResult": null,
+  "creationDate": "2021-02-12T08:19:51.477Z",
+  "submitAll": true,
+  "manuallyGraded": true,
+  "score": null,
+  "maxAttempts": 3,
+  "questionCardId": "4c5c39c4-e599-4a3d-978f-edc02f9bd703",
+  "context": {
+    "consumer_key": "CANVAS_6134",
+    "lis_result_sourcedid": "937068-3199873-31481002-11893758-74b15a7d241b46f01932d352e7d8828b01267d73",
+    "master_assessment_id": "490dd789-cea5-493e-b243-666a818c0428",
+    "user_id": "b665e5434bb2c921ef7da2d38d2b4a82d3adc608",
+    "roles": [
+      "Learner"
+    ],
+    "product_id": "cf276977-696c-4f34-9556-0a71dbbfe5bb",
+    "question_card_id": "4c5c39c4-e599-4a3d-978f-edc02f9bd703",
+    "context_id": "7aee798af8ec207208db72e5ddf3079261bb352b",
+    "assessment_id": "b7159f987837a1b280ede728a853e819e229e90537d2d52b14608c9d1c6c32fb",
+    "entry_num": 1,
+    "resource_link_id": "ab392e9ee4afd9b1d6c09ebc101e2bbafc281f54"
+  },
+  "eventHistory": [],
+  "id": "39e41de3-0e55-4573-885a-f371284574b6",
+  "itemResults": [
+    {
+      "numAttempts": 0,
+      "availableAssistances": [],
+      "visible": false,
+      "sessionStatus": "initial",
+      "available": "yes",
+      "manuallyGraded": false,
+      "feedback": null,
+      "maxAttempts": 3,
+      "score": null,
+      "datestamp": "2021-02-12T08:19:51.473Z",
+      "modified": false,
+      "responseVariables": [],
+      "id": "EAT_1561444544799_1_988828246766459_head",
+      "attemptPenalty": {
+        "attempt": 3,
+        "penalty": 0,
+        "used": false
+      },
+      "state": "none",
+      "hasSubmit": false
+    },
+    {
+      "numAttempts": 0,
+      "availableAssistances": [],
+      "visible": true,
+      "sessionStatus": "initial",
+      "available": "yes",
+      "weight": 0.2,
+      "manuallyGraded": false,
+      "feedback": null,
+      "maxAttempts": 3,
+      "score": null,
+      "datestamp": "2021-02-12T08:19:51.473Z",
+      "modified": false,
+      "responseVariables": [
+        {
+          "score": 0,
+          "gradableXLMap": null,
+          "candidateResponse": {
+            "values": [
+              ""
+            ]
+          },
+          "modified": false,
+          "lastDownloadedDate": null,
+          "id": "EAT_1561444544799_1_988828246766459_002",
+          "baseType": "identifier"
+        }
+      ],
+      "id": "EAT_1561444544841_1_0117601996735495",
+      "attemptPenalty": {
+        "attempt": 3,
+        "penalty": 0,
+        "used": false
+      },
+      "state": "inone",
+      "hasSubmit": false
+    },
+    {
+      "numAttempts": 0,
+      "availableAssistances": [],
+      "visible": false,
+      "sessionStatus": "initial",
+      "available": "yes",
+      "weight": 0.2,
+      "manuallyGraded": false,
+      "feedback": null,
+      "maxAttempts": 3,
+      "score": null,
+      "datestamp": "2021-02-12T08:19:51.473Z",
+      "modified": false,
+      "responseVariables": [
+        {
+          "score": 0,
+          "gradableXLMap": null,
+          "candidateResponse": {
+            "values": [
+              ""
+            ]
+          },
+          "modified": false,
+          "lastDownloadedDate": null,
+          "id": "EAT_1561444544799_1_988828246766459_009",
+          "baseType": "identifier"
+        }
+      ],
+      "id": "EAT_1561444544842_1_7344884860932837",
+      "attemptPenalty": {
+        "attempt": 3,
+        "penalty": 0,
+        "used": false
+      },
+      "state": "inone",
+      "hasSubmit": false
+    },
+    {
+      "numAttempts": 0,
+      "availableAssistances": [],
+      "visible": false,
+      "sessionStatus": "initial",
+      "available": "yes",
+      "weight": 0.2,
+      "manuallyGraded": false,
+      "feedback": null,
+      "maxAttempts": 3,
+      "score": null,
+      "datestamp": "2021-02-12T08:19:51.473Z",
+      "modified": false,
+      "responseVariables": [
+        {
+          "score": 0,
+          "gradableXLMap": null,
+          "candidateResponse": {
+            "values": [
+              ""
+            ]
+          },
+          "modified": false,
+          "lastDownloadedDate": null,
+          "id": "EAT_1561444544799_1_988828246766459_016",
+          "baseType": "identifier"
+        }
+      ],
+      "id": "EAT_1561444544842_1_6062550831579556",
+      "attemptPenalty": {
+        "attempt": 3,
+        "penalty": 0,
+        "used": false
+      },
+      "state": "inone",
+      "hasSubmit": false
+    },
+    {
+      "numAttempts": 0,
+      "availableAssistances": [],
+      "visible": false,
+      "sessionStatus": "initial",
+      "available": "yes",
+      "weight": 0.2,
+      "manuallyGraded": false,
+      "feedback": null,
+      "maxAttempts": 3,
+      "score": null,
+      "datestamp": "2021-02-12T08:19:51.473Z",
+      "modified": false,
+      "responseVariables": [
+        {
+          "score": 0,
+          "gradableXLMap": null,
+          "candidateResponse": {
+            "values": [
+              ""
+            ]
+          },
+          "modified": false,
+          "lastDownloadedDate": null,
+          "id": "EAT_1561444544799_1_988828246766459_023",
+          "baseType": "identifier"
+        }
+      ],
+      "id": "EAT_1561444544843_1_2311641668056912",
+      "attemptPenalty": {
+        "attempt": 3,
+        "penalty": 0,
+        "used": false
+      },
+      "state": "inone",
+      "hasSubmit": false
+    },
+    {
+      "numAttempts": 0,
+      "availableAssistances": [],
+      "visible": false,
+      "sessionStatus": "initial",
+      "available": "yes",
+      "weight": 0.2,
+      "manuallyGraded": true,
+      "feedback": null,
+      "maxAttempts": 3,
+      "score": null,
+      "datestamp": "2021-02-12T08:19:51.473Z",
+      "modified": false,
+      "responseVariables": [
+        {
+          "score": 0,
+          "gradableXLMap": null,
+          "candidateResponse": {
+            "values": [
+              "4636934b-d92e-4350-b005-e20cbdf58314",
+              "b665e5434bb2c921ef7da2d38d2b4a82d3adc608"
+            ]
+          },
+          "integration": {
+            "itemId": "was_item_essay_rt"
+          },
+          "modified": false,
+          "lastDownloadedDate": null,
+          "id": "EAT_1561444544799_1_988828246766459_001",
+          "baseType": "learnosityManualGrader"
+        }
+      ],
+      "id": "EAT_1561444544843_1_6420810949461333",
+      "attemptPenalty": {
+        "attempt": 3,
+        "penalty": 0,
+        "used": false
+      },
+      "state": "inone",
+      "hasSubmit": false
+    }
+  ],
+  "state": "imanual",
+  "attemptPenalty": {
+    "attempt": 3,
+    "penalty": 0
+  }
+}
+  ]

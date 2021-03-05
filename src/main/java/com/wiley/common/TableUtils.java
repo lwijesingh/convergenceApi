@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 public class TableUtils {
+
     public static <T> List<T> getTableData(ResultSet rs, Class<T> data) {
         List<T> tableData = new ArrayList<>();
         List<String> classFields = getResultSetColumnNames(rs);

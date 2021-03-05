@@ -1,0 +1,260 @@
+[{
+  //question::00039ca7-b314-4510-8aa1-3cd959cbf132
+  "_doctype": 7,
+  "masterQuestionId": "w7f077de1-8e46-41a3-8193-f5e212fbe1b2",
+  "masterQuestionVersion": "0",
+  "policies": {
+    "assistancePolicies": [{
+      "assistanceType": "answer",
+      "availableSinceAttempt": -1
+    }, {
+      "assistanceType": "reference",
+      "availableSinceAttempt": 3
+    }, {
+      "assistanceType": "hint",
+      "availableSinceAttempt": 2
+    }, {
+      "assistanceType": "solution",
+      "availableSinceAttempt": 4
+    }, {
+      "assistanceType": "listOfAccounts",
+      "availableSinceAttempt": 1
+    }],
+    "attemptPolicy": {
+      "maxAttempts": 10,
+      "attemptPenalty": {
+        "attempt": 3,
+        "penalty": 0
+      }
+    },
+    "evaluationPolicy": {
+      "numericPolicy": {
+        "enableQuestionLevelSignificantDigits": false,
+        "significantDigitsHelp": "passive",
+        "defaultTolerance": 2,
+        "significantDigitsInfo": "specific",
+        "enableQuestionLevelTolerance": false,
+        "showToleranceInfo": true
+      },
+      "unitsWeight": 0.5
+    },
+    "dueDatePolicy": {
+      "penalties": [],
+      "afterDueDateAccess": "viewWithAssistances"
+    },
+    "feedbackPolicy": "always",
+    "algorithmCalculationMode": "sameValues",
+    "shuffleResponseLabels": true
+  },
+  "title": "Chapter 7, Section 7.1, Question 002",
+  "algorithmResult": {
+    "id": "res_c07q_1_001",
+    "templateVariables": [{
+      "value": "4",
+      "id": "$a"
+    }, {
+      "value": "3",
+      "id": "$b"
+    }]
+  },
+  "creationDate": "2019-02-04T16:19:52.775Z",
+  "submitAll": true,
+  "score": null,
+  "questionCardId": "8dde401c-22be-484b-85fe-ed7f13dc97bf",
+  "context": {
+    "consumer_key": "EdwTestClaimAug17dev",
+    "master_assessment_id": "a165f1a3-d83a-4bf7-abf4-3c561f80e41f",
+    "user_id": "d2441e07dcf659018173f101e6ef6f334e956525",
+    "roles": ["Instructor"],
+    "product_id": "a5969101-1701-4452-93cc-e4c202c886cf",
+    "question_card_id": "8dde401c-22be-484b-85fe-ed7f13dc97bf",
+    "context_id": "f6bb39bea15994974ee01cbe1fd61a168c6e67c0",
+    "assessment_id": "a3ffad4c-92ed-4ee2-b7df-57769db3fa79",
+    "entry_num": 1,
+    "resource_link_id": "2842a2c5e4baeebb4026a8b82a5d302f3a1d3f61"
+  },
+  "id": "00039ca7-b314-4510-8aa1-3cd959cbf132",
+  "itemResults": [{
+    "numAttempts": 0,
+    "availableAssistances": [],
+    "visible": false,
+    "sessionStatus": "initial",
+    "available": "yes",
+    "feedback": null,
+    "maxAttempts": 10,
+    "score": null,
+    "datestamp": "2019-02-04T14:14:53.338Z",
+    "modified": false,
+    "responseVariables": [],
+    "id": "c07q_add02_1_1_head",
+    "attemptPenalty": {
+      "attempt": 3,
+      "penalty": 0,
+      "used": false
+    },
+    "hasSubmit": false
+  }, {
+    "numAttempts": 0,
+    "availableAssistances": [],
+    "visible": true,
+    "sessionStatus": "initial",
+    "available": "yes",
+    "feedback": null,
+    "maxAttempts": 10,
+    "score": null,
+    "datestamp": "2019-02-04T14:14:55.338Z",
+    "modified": false,
+    "responseVariables": [{
+      "score": 0,
+      "modified": false,
+      "id": "res_c07q_1_001_1",
+      "candidateResponse": {
+        "values": ["<?xml version=\"1.0\" ?><root><string></string></root>"]
+      },
+      "baseType": "mathPad"
+    }],
+    "id": "c07q_add02_1_1_part_1",
+    "attemptPenalty": {
+      "attempt": 3,
+      "penalty": 0,
+      "used": false
+    },
+    "hasSubmit": false
+  }, {
+    "numAttempts": 0,
+    "availableAssistances": [],
+    "visible": false,
+    "sessionStatus": "initial",
+    "available": "yes",
+    "feedback": null,
+    "maxAttempts": 10,
+    "score": null,
+    "datestamp": "2019-02-04T14:14:52.338Z",
+    "modified": false,
+    "responseVariables": [{
+      "score": 0,
+      "modified": false,
+      "id": "res_c07q_1_001_002",
+      "candidateResponse": {
+        "values": ["<?xml version=\"1.0\" ?><root><string></string></root>"]
+      },
+      "baseType": "mathPad"
+    }],
+    "id": "c07q_add02_1_1_part_2",
+    "attemptPenalty": {
+      "attempt": 3,
+      "penalty": 0,
+      "used": false
+    },
+    "hasSubmit": false
+  }, {
+    "numAttempts": 0,
+    "availableAssistances": [],
+    "visible": false,
+    "sessionStatus": "initial",
+    "available": "yes",
+    "feedback": null,
+    "maxAttempts": 10,
+    "score": null,
+    "datestamp": "2019-02-04T14:14:52.338Z",
+    "modified": false,
+    "responseVariables": [{
+      "score": 0,
+      "modified": false,
+      "id": "res_c07q_1_001_003",
+      "candidateResponse": {
+        "values": ["<?xml version=\"1.0\" ?><root><string></string></root>"]
+      },
+      "baseType": "mathPad"
+    }],
+    "id": "c07q_add02_1_1_part_3",
+    "attemptPenalty": {
+      "attempt": 3,
+      "penalty": 0,
+      "used": false
+    },
+    "hasSubmit": false
+  }, {
+    "numAttempts": 0,
+    "availableAssistances": [],
+    "visible": false,
+    "sessionStatus": "initial",
+    "available": "yes",
+    "feedback": null,
+    "maxAttempts": 10,
+    "score": null,
+    "datestamp": "2019-02-04T14:14:54.338Z",
+    "modified": false,
+    "responseVariables": [{
+      "score": 0,
+      "modified": false,
+      "id": "res_c07q_1_001_004",
+      "candidateResponse": {
+        "values": ["<?xml version=\"1.0\" ?><root><string></string></root>"]
+      },
+      "baseType": "mathPad"
+    }],
+    "id": "c07q_add02_1_1_part_4",
+    "attemptPenalty": {
+      "attempt": 3,
+      "penalty": 0,
+      "used": false
+    },
+    "hasSubmit": false
+  }, {
+    "numAttempts": 0,
+    "availableAssistances": [],
+    "visible": false,
+    "sessionStatus": "initial",
+    "available": "yes",
+    "feedback": null,
+    "maxAttempts": 10,
+    "score": null,
+    "datestamp": "2019-02-04T14:14:52.338Z",
+    "modified": false,
+    "responseVariables": [{
+      "score": 0,
+      "modified": false,
+      "id": "res_c07q_1_001_005",
+      "candidateResponse": {
+        "values": ["<?xml version=\"1.0\" ?><root><string></string></root>"]
+      },
+      "baseType": "mathPad"
+    }],
+    "id": "c07q_add02_1_1_part_5",
+    "attemptPenalty": {
+      "attempt": 3,
+      "penalty": 0,
+      "used": false
+    },
+    "hasSubmit": false
+  }, {
+    "numAttempts": 0,
+    "availableAssistances": [],
+    "visible": false,
+    "sessionStatus": "initial",
+    "available": "yes",
+    "feedback": null,
+    "maxAttempts": 10,
+    "score": null,
+    "datestamp": "2019-02-04T14:14:52.338Z",
+    "modified": false,
+    "responseVariables": [{
+      "score": 0,
+      "modified": false,
+      "id": "res_c07q_1_001_006",
+      "candidateResponse": {
+        "values": ["<?xml version=\"1.0\" ?><root><string></string></root>"]
+      },
+      "baseType": "mathPad"
+    }],
+    "id": "c07q_add02_1_1_part_6",
+    "attemptPenalty": {
+      "attempt": 3,
+      "penalty": 0,
+      "used": false
+    },
+    "hasSubmit": false
+  }]
+}
+  ]
