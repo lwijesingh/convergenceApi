@@ -1,4 +1,4 @@
-[{
+{
   "_doctype": 8.0,
   "timeSpent": 211316.0,
   "dueDate": "$Canvas.assignment.dueAt.iso8601",
@@ -355,4 +355,4 @@
     "unified_lti_domain": true
   },
   "status": "progress"
-}]
+}

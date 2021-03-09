@@ -1,6 +1,5 @@
 package com.wiley.tests;
 
-
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.document.JsonDocument;
 import com.couchbase.client.java.document.json.JsonObject;
@@ -86,9 +85,7 @@ public class SampleTests extends TestBase {
         //notice the document's CAS changed again...
 
         LoggerUtil.log("Got the following from database: " + bucket.get(key));
-        //... which is consistent with a get (RYOW)
-        //Below Test data fails
-        // dbConnections.getQueryData("POSTGRES_QA","", RequestUtil.class);
+
     }
 
     @Test
@@ -124,13 +121,35 @@ public class SampleTests extends TestBase {
     }
 
     @Test
-    public void testDBRequestAndResponseByXpath() {
+    public void testDBRequestAndResponseByXpath(){
         //Reading a lengthy String Json response
 
-        HashMap<String, Object> map[] = JsonUtil.getJSONArrayMapped("AllCourseDetails");
+        HashMap<String, Object> map[] = JsonUtil.getJSONArrayMapped("AssessmentQA");
 
-        String CouchebaseQueary = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[1]), "$..bicycle.price");
-        LoggerUtil.log("---"+CouchebaseQueary);
+        String points = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.points");
+        LoggerUtil.log("Total Points : "+points);
+
+        String pointsEarned = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.pointsEarned");
+        LoggerUtil.log("Total PointsEarned : "+pointsEarned);
+
+        String score = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.score");
+        LoggerUtil.log("Total Score : "+score);
+
+        String status = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.status");
+        LoggerUtil.log("Total Status : "+status);
+
+        String questionId = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.items[0].questionId");
+        LoggerUtil.log("Total questionId : "+questionId);
+
+        String noOfQuestions = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.items[*].numAttempts");
+        LoggerUtil.log("Total noOfQuestions as an array : "+noOfQuestions);
+
+        int noOfQuestions2 = JsonUtil.getElementCount2((JsonUtil.getJsonFromMap(map[0])), "items");
+        LoggerUtil.log("Total noOfQuestions2 : "+noOfQuestions2);
+
+        ArrayList<String> noOfQuestions3 = JsonUtil.getKeyValue(JsonUtil.getElementCount3((JsonUtil.getJsonFromMap(map[0])), "items"),"$.score.grade");
+        LoggerUtil.log("List within a nested array : "+noOfQuestions3);
+
     }
 
     @Test
