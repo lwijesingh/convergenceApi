@@ -163,13 +163,13 @@ public class JsonUtil {
         return element;
     }
 
-    public static int getElementCount(JSONObject json, String path) {
+   /* public static int getElementCount(JSONObject json, String path) {
         JsonObject jsonObject = (JsonObject) new JsonParser().parse(json.toString());
         JsonArray groupObject = jsonObject.getAsJsonArray(path);
         return groupObject.size();
-    }
+    }*/
 
-    public static int getElementCount2(JSONObject json, String path) {
+    public static int getElementCount(JSONObject json, String path) {
         JSONObject jsonResponse = new JSONObject(json.toString());
         JSONArray persons = jsonResponse.optJSONArray(path);
         for (int i = 0; i < persons.length(); i++) {
@@ -180,17 +180,10 @@ public class JsonUtil {
         return persons.length();
     }
 
-    public static JSONArray getElementCount3(JSONObject json, String path) {
+    public static JSONArray getElementCountAsaJsonArray(JSONObject json, String path) {
         JSONObject jsonResponse = new JSONObject(json.toString());
         JSONArray persons = jsonResponse.optJSONArray(path);
         return persons;
-    }
-
-    public static String getElementCount4(JSONObject json, String path) {
-        JSONObject jsonResponse = new JSONObject(json.toString());
-        JSONArray persons = jsonResponse.optJSONArray(path);
-        String filteredJson = persons.toString();
-        return filteredJson;
     }
 
     private static <T> String loadFile(String tClass) {

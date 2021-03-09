@@ -144,10 +144,10 @@ public class SampleTests extends TestBase {
         String noOfQuestions = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.items[*].numAttempts");
         LoggerUtil.log("Total noOfQuestions as an array : "+noOfQuestions);
 
-        int noOfQuestions2 = JsonUtil.getElementCount2((JsonUtil.getJsonFromMap(map[0])), "items");
+        int noOfQuestions2 = JsonUtil.getElementCount((JsonUtil.getJsonFromMap(map[0])), "items");
         LoggerUtil.log("Total noOfQuestions2 : "+noOfQuestions2);
 
-        ArrayList<String> noOfQuestions3 = JsonUtil.getKeyValue(JsonUtil.getElementCount3((JsonUtil.getJsonFromMap(map[0])), "items"),"$.score.grade");
+        ArrayList<String> noOfQuestions3 = JsonUtil.getKeyValue(JsonUtil.getElementCountAsaJsonArray((JsonUtil.getJsonFromMap(map[0])), "items"),"$.score.grade");
         LoggerUtil.log("List within a nested array : "+noOfQuestions3);
 
     }
