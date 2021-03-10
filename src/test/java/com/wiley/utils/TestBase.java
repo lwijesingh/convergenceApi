@@ -54,7 +54,6 @@ public class TestBase {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result) {
-        LoggerUtil.log("Browser Closed Before Updating Qcenter");
         switch (result.getStatus()) {
             case ITestResult.SUCCESS:
                 LoggerUtil.log("====== TEST PASSED =====");

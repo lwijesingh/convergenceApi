@@ -144,6 +144,12 @@ public class JsonUtil {
         return JsonPath.read(document, path).toString();
     }
 
+    public static int getKeyValueAsInt(JSONObject json, String path) {
+        // LoggerUtil.log("Json Object : " + json.toString());
+        Object document = Configuration.defaultConfiguration().jsonProvider().parse(json.toString());
+        return JsonPath.read(document, path);
+    }
+
     public static ArrayList<String> getKeyValue(JSONArray json, String path) {
         Object document = Configuration.defaultConfiguration().jsonProvider().parse(json.toString());
         LoggerUtil.log("Json file : " + json);

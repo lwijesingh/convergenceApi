@@ -45,6 +45,14 @@ public class RequestHeader {
         return headers;
     }
 
+    public static HashMap<String, String> getHeader(String cookies) {
+        HashMap<String, String> headers = new HashMap();
+        headers.put("Content-Type", "application/json");
+        headers.put("cookie", cookies);
+        return headers;
+    }
+
+
     public static HashMap<String, String> getHeaderQMetry(String clientID, String clientSecret, String jsessionID, String referer) {
         HashMap<String, String> headers = new HashMap();
         headers.put("Content-Type", "application/json");

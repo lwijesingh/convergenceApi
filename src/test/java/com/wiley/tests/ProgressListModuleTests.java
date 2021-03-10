@@ -5,15 +5,21 @@ import com.couchbase.client.java.document.JsonDocument;
 import com.couchbase.client.java.document.json.JsonObject;
 import com.couchbase.client.java.error.DocumentAlreadyExistsException;
 import com.couchbase.client.java.transcoder.JsonTranscoder;
+import com.jayway.restassured.response.Response;
+import com.wiley.common.Constant;
 import com.wiley.common.LoggerUtil;
 import com.wiley.data.postgreSql.ResultContext;
+import com.wiley.data.progresList.ProgresList;
 import com.wiley.utils.TestBase;
+import com.wiley.utils.api.RequestUtil;
+import com.wiley.utils.api.ResponseUtil;
 import com.wiley.utils.db.DBConnections;
 import com.wiley.utils.json.JsonUtil;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -70,6 +76,57 @@ public class ProgressListModuleTests extends TestBase {
         //... which is consistent with a get (RYOW)
         //Below Test data fails
         // dbConnections.getQueryData("POSTGRES_QA","", RequestUtil.class);
+    }
+    @Test
+    public void testDBRequestAndResponseByXpath(){
+        //Reading a lengthy String Json response
+
+        HashMap<String, Object> map[] = JsonUtil.getJSONArrayMapped("AssessmentQA");
+
+        String assessmentId = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.id");
+        LoggerUtil.log("assessmentId : "+assessmentId);
+
+        String ltiUserId = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$..user_id");
+        LoggerUtil.log("user_id : "+ltiUserId);
+
+        int totalNoOfQuestions = JsonUtil.getElementCount((JsonUtil.getJsonFromMap(map[0])), "items");
+        LoggerUtil.log("Total noOfQuestions : "+totalNoOfQuestions);
+
+        ArrayList<String> timeSpent = JsonUtil.getKeyValue(JsonUtil.getElementCountAsaJsonArray((JsonUtil.getJsonFromMap(map[0])), "items"),"$.timeSpent");
+        LoggerUtil.log("Time Spent : "+timeSpent);
+
+        String score = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.score");
+        LoggerUtil.log("Total Score : "+score);
+
+        int duration = JsonUtil.getKeyValueAsInt(JsonUtil.getJsonFromMap(map[0]), "$.aPolicies.itemPolicies.timeDurationPolicy.duration");
+        LoggerUtil.log("Duration : "+duration);
+
+        String status = JsonUtil.getKeyValue(JsonUtil.getJsonFromMap(map[0]), "$.status");
+        LoggerUtil.log(" Status : "+status);
+
+    }
+
+    @Test
+    public void testAPIResponse(){
+        Response response;
+        response = RequestUtil.sendRequest(Constant.QA_PROGRESLIST_URI);
+        ProgresList progresList=ResponseUtil.getResponseAsMapped(response,ProgresList.class);
+        LoggerUtil.log("####### totalUserAssessments : "+progresList.totalUserAssessments);
+        LoggerUtil.log("####### assessmentId : "+progresList.usersAssessments.get(0).assessmentId);
+        LoggerUtil.log("####### firstName : "+progresList.usersAssessments.get(0).firstName);
+        LoggerUtil.log("####### lastName : "+progresList.usersAssessments.get(0).lastName);
+        LoggerUtil.log("####### ltiUserId : "+progresList.usersAssessments.get(0).ltiUserId);
+        LoggerUtil.log("####### accommodated : "+progresList.usersAssessments.get(0).accommodated);
+        LoggerUtil.log("####### totalQuestions : "+progresList.usersAssessments.get(0).totalQuestions);
+        LoggerUtil.log("####### completedQuestions : "+progresList.usersAssessments.get(0).completedQuestions);
+        LoggerUtil.log("####### timeSpent : "+progresList.usersAssessments.get(0).timeSpent);
+        LoggerUtil.log("####### score : "+progresList.usersAssessments.get(0).score);
+        LoggerUtil.log("####### totalTime : "+progresList.usersAssessments.get(0).totalTime);
+        LoggerUtil.log("####### graded : "+progresList.usersAssessments.get(0).graded);
+        LoggerUtil.log("####### timeUnit : "+progresList.usersAssessments.get(0).timeUnit);
+        LoggerUtil.log("####### outOfSync : "+progresList.usersAssessments.get(0).outOfSync);
+        LoggerUtil.log("####### status : "+progresList.usersAssessments.get(0).status);
+        LoggerUtil.log("####### timeLineViewItems : "+progresList.usersAssessments.get(0).timeLineViewItems);
     }
 
 }
