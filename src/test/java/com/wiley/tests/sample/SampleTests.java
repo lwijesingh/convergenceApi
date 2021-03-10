@@ -1,4 +1,4 @@
-package com.wiley.tests;
+package com.wiley.tests.sample;
 
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.document.JsonDocument;
