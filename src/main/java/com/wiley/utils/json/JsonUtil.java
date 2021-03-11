@@ -157,16 +157,42 @@ public class JsonUtil {
         for (int i = 0; i < json.length(); i++) {
             JSONArray jarr = new JSONArray(json);
             JSONObject jobj = jarr.getJSONObject(i);
-          try {
-              element.add(getKeyValue(jobj, path));
-          }
-          catch(PathNotFoundException e){
-              LoggerUtil.log("Json path not found! : "+ e);
-              break;
-          }
+            try {
+                element.add(getKeyValue(jobj, path));
+            } catch (PathNotFoundException e) {
+                LoggerUtil.log("Json path not found! : " + e);
+                break;
+            }
 
         }
         return element;
+    }
+
+    public static ArrayList<Integer> getKeyValueASInteger(JSONArray json, String path) {
+        Object document = Configuration.defaultConfiguration().jsonProvider().parse(json.toString());
+        LoggerUtil.log("Json file : " + json);
+        ArrayList<Integer> element = new ArrayList<>();
+        for (int i = 0; i < json.length(); i++) {
+            JSONArray jarr = new JSONArray(json);
+            JSONObject jobj = jarr.getJSONObject(i);
+            try {
+                element.add(Integer.parseInt(getKeyValue(jobj, path)));
+            } catch (PathNotFoundException e) {
+                LoggerUtil.log("Json path not found! : " + e);
+                break;
+            }
+
+        }
+        return element;
+    }
+
+    public static int getTheSumOfArray(ArrayList<Integer> timeSpent) {
+        int sum = 0;
+        for (int value : timeSpent) {
+            sum += value;
+        }
+        return sum;
+
     }
 
    /* public static int getElementCount(JSONObject json, String path) {
